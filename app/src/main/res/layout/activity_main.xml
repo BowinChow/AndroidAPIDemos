@@ -56,15 +56,17 @@
         android:layout_height="60dp"
         android:orientation="horizontal">
 
-        <Button
+        <com.example.widget.view.SubmitButton
             android:id="@+id/mvp_btn"
+            style="@style/ButtonStyle"
             android:layout_width="1dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="Login" />
 
-        <Button
+        <com.example.widget.view.SubmitButton
             android:id="@+id/mvp_register"
+            style="@style/ButtonStyle"
             android:layout_width="1dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -73,16 +75,19 @@
     </LinearLayout>
 
 
-    <Button
+    <com.example.widget.view.SubmitButton
         android:id="@+id/mvp_retrofit"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        style="@style/ButtonStyle"
         android:text="retrofit" />
 
-    <Button
+    <com.example.widget.view.SubmitButton
         android:id="@+id/list_btn"
+        style="@style/ButtonStyle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"
         android:text="listview" />
 
     <ProgressBar

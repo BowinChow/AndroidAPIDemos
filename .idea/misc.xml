@@ -3,10 +3,17 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/AndroidDemo/app/src/main/res/drawable/add_ic.xml" value="0.1" />
         <entry key="..\:/AndroidDemo/app/src/main/res/layout/activity_fragment.xml" value="0.10625" />
         <entry key="..\:/AndroidDemo/app/src/main/res/layout/activity_list.xml" value="0.10625" />
         <entry key="..\:/AndroidDemo/app/src/main/res/layout/activity_main.xml" value="0.17753623188405798" />
         <entry key="..\:/AndroidDemo/app/src/main/res/layout/fruit_item.xml" value="0.1" />
+        <entry key="..\:/AndroidDemo/library/widget/src/main/res/drawable/input_delete_ic.xml" value="0.1175" />
+        <entry key="..\:/AndroidDemo/library/widget/src/main/res/drawable/password_off_ic.xml" value="0.1175" />
+        <entry key="..\:/AndroidDemo/library/widget/src/main/res/drawable/password_on_ic.xml" value="0.1175" />
+        <entry key="..\:/AndroidDemo/library/widget/src/main/res/drawable/rating_star_fill_ic.xml" value="0.1" />
+        <entry key="..\:/AndroidDemo/library/widget/src/main/res/drawable/rating_star_half_ic.xml" value="0.1" />
+        <entry key="..\:/AndroidDemo/library/widget/src/main/res/drawable/rating_star_off_ic.xml" value="0.1" />
       </map>
     </option>
   </component>

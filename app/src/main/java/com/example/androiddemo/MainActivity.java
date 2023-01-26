@@ -18,6 +18,7 @@ import com.example.androiddemo.Presenter.IPresenter;
 import com.example.androiddemo.Presenter.presenterImpl;
 import com.example.androiddemo.View.ILoginView;
 import com.example.androiddemo.utils.ContextUtils;
+import com.example.widget.view.SubmitButton;
 
 public class MainActivity extends AppCompatActivity implements ILoginView {
     private presenterImpl presenter;
@@ -25,15 +26,19 @@ public class MainActivity extends AppCompatActivity implements ILoginView {
     private ProgressBar pb;
     private EditText mvpAccount;
     private CheckBox CB;
+    SubmitButton mvpButton;
+    SubmitButton mvpRetrofitBtn;
+    SubmitButton listButton;
+    SubmitButton registerButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        Button mvpButton = findViewById(R.id.mvp_btn);
-        Button mvpRetrofitBtn = findViewById(R.id.mvp_retrofit);
-        Button listButton = findViewById(R.id.list_btn);
-        Button registerButton = findViewById(R.id.mvp_register);
+        mvpButton = findViewById(R.id.mvp_btn);
+        mvpRetrofitBtn = findViewById(R.id.mvp_retrofit);
+        listButton = findViewById(R.id.list_btn);
+        registerButton = findViewById(R.id.mvp_register);
 
         ContextUtils.registerActivity(MainActivity.this);
 

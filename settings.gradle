@@ -14,3 +14,6 @@ dependencyResolutionManagement {
 }
 rootProject.name = "AndroidDemo"
 include ':app'
+include ':library'
+include ':library:widget'
+include ':library:base'
