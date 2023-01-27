@@ -15,7 +15,7 @@ import androidx.annotation.Nullable;
 import androidx.core.content.ContextCompat;
 import androidx.core.graphics.drawable.DrawableCompat;
 
-import com.hjq.widget.R;
+import com.example.widget.R;
 
 /**
  *    author : Android 轮子哥

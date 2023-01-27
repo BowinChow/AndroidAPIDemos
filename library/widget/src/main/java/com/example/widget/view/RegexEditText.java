@@ -9,7 +9,7 @@ import android.util.AttributeSet;
 
 import androidx.appcompat.widget.AppCompatEditText;
 
-import com.hjq.widget.R;
+import com.example.widget.R;
 
 import java.util.regex.Pattern;
 

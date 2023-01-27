@@ -16,7 +16,7 @@ import android.view.animation.AnticipateInterpolator;
 
 import androidx.annotation.Nullable;
 
-import com.hjq.widget.R;
+import com.example.widget.R;
 
 /**
  *    author : codeestX & Android 轮子哥
@@ -59,6 +59,7 @@ public final class PlayButton extends View {
         this(context, null);
     }
 
+
     public PlayButton(Context context, @Nullable AttributeSet attrs) {
         this(context, attrs, 0);
     }
@@ -68,7 +69,7 @@ public final class PlayButton extends View {
 
         TypedArray typedArray = context.obtainStyledAttributes(attrs, R.styleable.PlayButton);
         int lineColor = typedArray.getColor(R.styleable.PlayButton_pb_lineColor, Color.WHITE);
-        int lineSize = typedArray.getInteger(R.styleable.PlayButton_pb_lineSize, (int) getResources().getDimension(R.dimen.dp_4));
+        int lineSize = typedArray.getInteger(R.styleable.PlayButton_pb_lineSize, (int) getResources().getDimension(com.example.base.R.dimen.dp_4));
         mAnimDuration = typedArray.getInteger(R.styleable.PlayButton_pb_animDuration, 200);
         typedArray.recycle();
 
@@ -92,7 +93,7 @@ public final class PlayButton extends View {
         super.onSizeChanged(width, height, oldWidth, oldHeight);
         mWidth = width * 9 / 10;
         mHeight = height * 9 / 10;
-        mCircleRadius = mWidth / (int) getResources().getDimension(R.dimen.dp_4);
+        mCircleRadius = mWidth / (int) getResources().getDimension(com.example.base.R.dimen.dp_4);
         mCenterX = width / 2;
         mCenterY = height / 2;
         mRectF = new RectF(mCenterX - mCircleRadius, mCenterY + 0.6f * mCircleRadius,
@@ -112,7 +113,7 @@ public final class PlayButton extends View {
         switch (MeasureSpec.getMode(widthMeasureSpec)) {
             case MeasureSpec.AT_MOST:
             case MeasureSpec.UNSPECIFIED:
-                widthMeasureSpec = MeasureSpec.makeMeasureSpec((int) getResources().getDimension(R.dimen.dp_60), MeasureSpec.EXACTLY);
+                widthMeasureSpec = MeasureSpec.makeMeasureSpec((int) getResources().getDimension(com.example.base.R.dimen.dp_60), MeasureSpec.EXACTLY);
                 break;
             case MeasureSpec.EXACTLY:
             default:
@@ -122,7 +123,7 @@ public final class PlayButton extends View {
         switch (MeasureSpec.getMode(heightMeasureSpec)) {
             case MeasureSpec.AT_MOST:
             case MeasureSpec.UNSPECIFIED:
-                heightMeasureSpec = MeasureSpec.makeMeasureSpec((int) getResources().getDimension(R.dimen.dp_60), MeasureSpec.EXACTLY);
+                heightMeasureSpec = MeasureSpec.makeMeasureSpec((int) getResources().getDimension(com.example.base.R.dimen.dp_60), MeasureSpec.EXACTLY);
                 break;
             case MeasureSpec.EXACTLY:
             default:

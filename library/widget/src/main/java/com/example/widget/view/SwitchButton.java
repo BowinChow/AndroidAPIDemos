@@ -19,7 +19,7 @@ import android.view.animation.AccelerateInterpolator;
 
 import androidx.annotation.Nullable;
 
-import com.hjq.widget.R;
+import com.example.widget.R;
 
 /**
  *    author : Android 轮子哥
@@ -117,7 +117,7 @@ public final class SwitchButton extends View {
         switch (MeasureSpec.getMode(widthMeasureSpec)) {
             case MeasureSpec.AT_MOST:
             case MeasureSpec.UNSPECIFIED:
-                widthMeasureSpec = MeasureSpec.makeMeasureSpec((int) (getResources().getDimension(R.dimen.dp_56) + getPaddingLeft() + getPaddingRight()), MeasureSpec.EXACTLY);
+                widthMeasureSpec = MeasureSpec.makeMeasureSpec((int) (getResources().getDimension(com.example.base.R.dimen.dp_56) + getPaddingLeft() + getPaddingRight()), MeasureSpec.EXACTLY);
                 break;
             case MeasureSpec.EXACTLY:
             default:

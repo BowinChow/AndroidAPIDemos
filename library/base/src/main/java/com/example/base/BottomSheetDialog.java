@@ -28,7 +28,7 @@ import com.google.android.material.bottomsheet.BottomSheetBehavior;
  *    time   : 2020/09/12
  *    desc   : 在 BaseDialog 基础上加上 {@link com.google.android.material.bottomsheet.BottomSheetDialog} 特性
  */
-public final class BottomSheetDialog extends com.hjq.base.BaseDialog
+public final class BottomSheetDialog extends com.example.base.BaseDialog
         implements OnTouchListener, View.OnClickListener {
 
     private final BottomSheetBehavior<FrameLayout> mBottomSheetBehavior;

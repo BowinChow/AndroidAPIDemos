@@ -12,7 +12,7 @@ import androidx.annotation.Nullable;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.hjq.base.action.ResourcesAction;
+import com.example.base.action.ResourcesAction;
 
 /**
  *    author : Android 轮子哥

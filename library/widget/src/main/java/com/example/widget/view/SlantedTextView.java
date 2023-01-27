@@ -22,7 +22,7 @@ import android.view.View;
 import androidx.annotation.NonNull;
 import androidx.annotation.StringRes;
 
-import com.hjq.widget.R;
+import com.example.widget.R;
 
 /**
  *    author : HaoZhang & Android 轮子哥
@@ -78,7 +78,7 @@ public final class SlantedTextView extends View {
         TypedArray array = context.obtainStyledAttributes(attrs, R.styleable.SlantedTextView);
 
         setText(array.getString(R.styleable.SlantedTextView_android_text));
-        setTextSize(TypedValue.COMPLEX_UNIT_PX, array.getDimensionPixelSize(R.styleable.SlantedTextView_android_textSize, (int) getResources().getDimension(R.dimen.sp_12)));
+        setTextSize(TypedValue.COMPLEX_UNIT_PX, array.getDimensionPixelSize(R.styleable.SlantedTextView_android_textSize, (int) getResources().getDimension(com.example.base.R.dimen.sp_12)));
         setTextColor(array.getColor(R.styleable.SlantedTextView_android_textColor, Color.WHITE));
         setTextStyle(Typeface.defaultFromStyle(array.getInt(R.styleable.SlantedTextView_android_textStyle, Typeface.NORMAL)));
         setGravity(array.getInt(R.styleable.SlantedTextView_android_gravity, Gravity.END));
@@ -415,7 +415,7 @@ public final class SlantedTextView extends View {
      */
     private int getAccentColor() {
         TypedValue typedValue = new TypedValue();
-        getContext().getTheme().resolveAttribute(R.attr.colorAccent, typedValue, true);
+        getContext().getTheme().resolveAttribute(androidx.appcompat.R.attr.colorAccent, typedValue, true);
         return typedValue.data;
     }
 }

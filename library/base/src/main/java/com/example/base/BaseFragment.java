@@ -15,12 +15,12 @@ import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.Lifecycle;
 
-import com.hjq.base.action.ActivityAction;
-import com.hjq.base.action.BundleAction;
-import com.hjq.base.action.ClickAction;
-import com.hjq.base.action.HandlerAction;
-import com.hjq.base.action.KeyboardAction;
-import com.hjq.base.action.ResourcesAction;
+import com.example.base.action.ActivityAction;
+import com.example.base.action.BundleAction;
+import com.example.base.action.ClickAction;
+import com.example.base.action.HandlerAction;
+import com.example.base.action.KeyboardAction;
+import com.example.base.action.ResourcesAction;
 
 import java.util.List;
 
@@ -30,7 +30,7 @@ import java.util.List;
  *    time   : 2018/10/18
  *    desc   : Fragment 技术基类
  */
-public abstract class BaseFragment<A extends com.hjq.base.BaseActivity> extends Fragment implements
+public abstract class BaseFragment<A extends com.example.base.BaseActivity> extends Fragment implements
         ActivityAction, ResourcesAction, HandlerAction, ClickAction, BundleAction, KeyboardAction {
 
     /** Activity 对象 */
@@ -167,15 +167,15 @@ public abstract class BaseFragment<A extends com.hjq.base.BaseActivity> extends 
      * startActivityForResult 方法优化
      */
 
-    public void startActivityForResult(Class<? extends Activity> clazz, com.hjq.base.BaseActivity.OnActivityCallback callback) {
+    public void startActivityForResult(Class<? extends Activity> clazz, com.example.base.BaseActivity.OnActivityCallback callback) {
         getAttachActivity().startActivityForResult(clazz, callback);
     }
 
-    public void startActivityForResult(Intent intent, com.hjq.base.BaseActivity.OnActivityCallback callback) {
+    public void startActivityForResult(Intent intent, com.example.base.BaseActivity.OnActivityCallback callback) {
         getAttachActivity().startActivityForResult(intent, null, callback);
     }
 
-    public void startActivityForResult(Intent intent, Bundle options, com.hjq.base.BaseActivity.OnActivityCallback callback) {
+    public void startActivityForResult(Intent intent, Bundle options, com.example.base.BaseActivity.OnActivityCallback callback) {
         getAttachActivity().startActivityForResult(intent, options, callback);
     }
 

@@ -60,6 +60,7 @@ public class MainActivity extends AppCompatActivity implements ILoginView {
         presenter = new presenterImpl(this);
 
         mvpButton.setOnClickListener(v -> {
+            mvpButton.showProgress();
             presenter.doLogin(mvpAccount.getText().toString(), mvpPsw.getText().toString());
         });
 
@@ -98,5 +99,27 @@ public class MainActivity extends AppCompatActivity implements ILoginView {
     public void startAnotherActivity() {
         Intent intent = new Intent(MainActivity.this, FragmentActivity.class);
         startActivity(intent);
+    }
+
+    @Override
+    public void buttonSubmitSuccess() {
+        mvpButton.showSucceed();
+    }
+
+    @Override
+    public void buttonSubmitFailed() {
+        mvpButton.showError();
+    }
+
+    @Override
+    protected void onResume() {
+
+        super.onResume();
+        listButton.reset();
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
     }
 }

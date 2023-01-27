@@ -23,7 +23,7 @@ import androidx.annotation.Nullable;
 import androidx.annotation.StringRes;
 import androidx.core.content.ContextCompat;
 
-import com.hjq.widget.R;
+import com.example.widget.R;
 
 /**
  *    author : Android 轮子哥
@@ -89,17 +89,17 @@ public final class SettingBar extends FrameLayout {
         mLeftView.setEllipsize(TextUtils.TruncateAt.END);
         mRightView.setEllipsize(TextUtils.TruncateAt.END);
 
-        mLeftView.setLineSpacing(getResources().getDimension(R.dimen.dp_5), mLeftView.getLineSpacingMultiplier());
-        mRightView.setLineSpacing(getResources().getDimension(R.dimen.dp_5), mRightView.getLineSpacingMultiplier());
+        mLeftView.setLineSpacing(getResources().getDimension(com.example.base.R.dimen.dp_60), mLeftView.getLineSpacingMultiplier());
+        mRightView.setLineSpacing(getResources().getDimension(com.example.base.R.dimen.dp_5), mRightView.getLineSpacingMultiplier());
 
-        mLeftView.setPaddingRelative((int) getResources().getDimension(R.dimen.dp_15),
-                (int) getResources().getDimension(R.dimen.dp_12),
-                (int) getResources().getDimension(R.dimen.dp_15),
-                (int) getResources().getDimension(R.dimen.dp_12));
-        mRightView.setPaddingRelative((int) getResources().getDimension(R.dimen.dp_15),
-                (int) getResources().getDimension(R.dimen.dp_12),
-                (int) getResources().getDimension(R.dimen.dp_15),
-                (int) getResources().getDimension(R.dimen.dp_12));
+        mLeftView.setPaddingRelative((int) getResources().getDimension(com.example.base.R.dimen.dp_15),
+                (int) getResources().getDimension(com.example.base.R.dimen.dp_12),
+                (int) getResources().getDimension(com.example.base.R.dimen.dp_12),
+                (int) getResources().getDimension(com.example.base.R.dimen.dp_12));
+        mRightView.setPaddingRelative((int) getResources().getDimension(com.example.base.R.dimen.dp_15),
+                (int) getResources().getDimension(com.example.base.R.dimen.dp_12),
+                (int) getResources().getDimension(com.example.base.R.dimen.dp_15),
+                (int) getResources().getDimension(com.example.base.R.dimen.dp_12));
 
         final TypedArray array = getContext().obtainStyledAttributes(attrs, R.styleable.SettingBar);
 
@@ -142,10 +142,10 @@ public final class SettingBar extends FrameLayout {
         // 图标和文字之间的间距
         setLeftDrawablePadding(array.hasValue(R.styleable.SettingBar_bar_leftDrawablePadding) ?
                 array.getDimensionPixelSize(R.styleable.SettingBar_bar_leftDrawablePadding, 0) :
-                (int) getResources().getDimension(R.dimen.dp_10));
+                (int) getResources().getDimension(com.example.base.R.dimen.dp_10));
         setRightDrawablePadding(array.hasValue(R.styleable.SettingBar_bar_rightDrawablePadding) ?
                 array.getDimensionPixelSize(R.styleable.SettingBar_bar_rightDrawablePadding, 0) :
-                (int) getResources().getDimension(R.dimen.dp_10));
+                (int) getResources().getDimension(com.example.base.R.dimen.dp_10));
 
         // 图标设置
         if (array.hasValue(R.styleable.SettingBar_bar_leftDrawable)) {
@@ -157,12 +157,12 @@ public final class SettingBar extends FrameLayout {
         }
 
         // 文字颜色设置
-        setLeftTextColor(array.getColor(R.styleable.SettingBar_bar_leftTextColor, ContextCompat.getColor(getContext(), R.color.black80)));
-        setRightTextColor(array.getColor(R.styleable.SettingBar_bar_rightTextColor, ContextCompat.getColor(getContext(), R.color.black60)));
+        setLeftTextColor(array.getColor(R.styleable.SettingBar_bar_leftTextColor, ContextCompat.getColor(getContext(), com.example.base.R.color.black80)));
+        setRightTextColor(array.getColor(R.styleable.SettingBar_bar_rightTextColor, ContextCompat.getColor(getContext(), com.example.base.R.color.black60)));
 
         // 文字大小设置
-        setLeftTextSize(TypedValue.COMPLEX_UNIT_PX, array.getDimensionPixelSize(R.styleable.SettingBar_bar_leftTextSize, (int) getResources().getDimension(R.dimen.sp_15)));
-        setRightTextSize(TypedValue.COMPLEX_UNIT_PX, array.getDimensionPixelSize(R.styleable.SettingBar_bar_rightTextSize, (int) getResources().getDimension(R.dimen.sp_14)));
+        setLeftTextSize(TypedValue.COMPLEX_UNIT_PX, array.getDimensionPixelSize(R.styleable.SettingBar_bar_leftTextSize, (int) getResources().getDimension(com.example.base.R.dimen.sp_15)));
+        setRightTextSize(TypedValue.COMPLEX_UNIT_PX, array.getDimensionPixelSize(R.styleable.SettingBar_bar_rightTextSize, (int) getResources().getDimension(com.example.base.R.dimen.sp_14)));
 
         // 分割线设置
         if (array.hasValue(R.styleable.SettingBar_bar_lineDrawable)) {
@@ -185,10 +185,10 @@ public final class SettingBar extends FrameLayout {
 
         if (getBackground() == null) {
             StateListDrawable drawable = new StateListDrawable();
-            drawable.addState(new int[]{android.R.attr.state_pressed}, new ColorDrawable(ContextCompat.getColor(getContext(), R.color.black5)));
-            drawable.addState(new int[]{android.R.attr.state_selected}, new ColorDrawable(ContextCompat.getColor(getContext(), R.color.black5)));
-            drawable.addState(new int[]{android.R.attr.state_focused}, new ColorDrawable(ContextCompat.getColor(getContext(), R.color.black5)));
-            drawable.addState(new int[]{}, new ColorDrawable(ContextCompat.getColor(getContext(), R.color.white)));
+            drawable.addState(new int[]{android.R.attr.state_pressed}, new ColorDrawable(ContextCompat.getColor(getContext(), com.example.base.R.color.black5)));
+            drawable.addState(new int[]{android.R.attr.state_selected}, new ColorDrawable(ContextCompat.getColor(getContext(), com.example.base.R.color.black5)));
+            drawable.addState(new int[]{android.R.attr.state_focused}, new ColorDrawable(ContextCompat.getColor(getContext(), com.example.base.R.color.black5)));
+            drawable.addState(new int[]{}, new ColorDrawable(ContextCompat.getColor(getContext(), com.example.base.R.color.white)));
             setBackground(drawable);
 
             // 必须要设置可点击，否则点击屏幕任何角落都会触发按压事件

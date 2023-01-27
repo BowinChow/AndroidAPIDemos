@@ -13,7 +13,7 @@ import android.view.View;
 import androidx.annotation.DrawableRes;
 import androidx.core.content.ContextCompat;
 
-import com.hjq.widget.R;
+import com.example.widget.R;
 
 /**
  *    author : Android 轮子哥

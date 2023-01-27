@@ -14,11 +14,11 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.Lifecycle;
 
-import com.hjq.base.action.ActivityAction;
-import com.hjq.base.action.BundleAction;
-import com.hjq.base.action.ClickAction;
-import com.hjq.base.action.HandlerAction;
-import com.hjq.base.action.KeyboardAction;
+import com.example.base.action.ActivityAction;
+import com.example.base.action.BundleAction;
+import com.example.base.action.ClickAction;
+import com.example.base.action.HandlerAction;
+import com.example.base.action.KeyboardAction;
 
 import java.util.List;
 import java.util.Random;

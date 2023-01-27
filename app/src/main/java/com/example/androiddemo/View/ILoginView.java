@@ -8,5 +8,7 @@ public interface ILoginView {
     void makeToast(String content);
 
     void startAnotherActivity();
+    void buttonSubmitSuccess();
+    void buttonSubmitFailed();
 
 }

@@ -28,14 +28,16 @@ public class presenterImpl implements IPresenter {
         model.login(account, pwd, new ILoginListener() {
             @Override
             public void onSuccess() {
+
+                view.buttonSubmitSuccess();
                 view.hideProgressBar();
                 view.makeToast("login successfully!");
-                view.startAnotherActivity();
             }
 
             @Override
             public void onFailure() {
                 view.hideProgressBar();
+                view.buttonSubmitFailed();
                 view.makeToast("login failed!");
             }
 

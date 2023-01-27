@@ -11,7 +11,7 @@ import android.widget.FrameLayout;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
-import com.hjq.widget.R;
+import com.example.widget.R;
 
 /**
  *    author : Android 轮子哥
