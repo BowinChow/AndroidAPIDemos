@@ -17,6 +17,9 @@
         android:theme="@style/Theme.AndroidDemo"
         tools:targetApi="31">
         <activity
+            android:name=".BasicUsageActivity"
+            android:exported="false" />
+        <activity
             android:name=".ListActivity"
             android:exported="false" />
         <activity

@@ -74,27 +74,45 @@
 
     </LinearLayout>
 
-
-    <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/mvp_retrofit"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        style="@style/ButtonStyle"
-        android:text="retrofit" />
-
-    <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/list_btn"
-        style="@style/ButtonStyle"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="100dp"
-        android:text="listview" />
-
     <ProgressBar
         android:id="@+id/mvp_prb"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:visibility="invisible" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/mvp_retrofit"
+            style="@style/ButtonStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="retrofit" />
+
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/list_btn"
+            style="@style/ButtonStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/mvp_retrofit"
+            android:layout_marginTop="20dp"
+            android:text="listview" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/mvp_database"
+            style="@style/ButtonStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/list_btn"
+            android:layout_marginTop="20dp"
+
+
+            android:text="database" />
+
+    </RelativeLayout>
 
 
 </LinearLayout>
