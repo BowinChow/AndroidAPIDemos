@@ -72,4 +72,9 @@ public class FragmentActivity extends AppCompatActivity implements ILoginView {
     public void buttonSubmitFailed() {
 
     }
+
+    @Override
+    public void buttonReset() {
+
+    }
 }

@@ -40,10 +40,16 @@ public class LoginModelImpl implements ILoginModel {
             Log.e(TAG, "the account is: " + originAcc + " password: " + originPwd);
             if (originAcc == null && originPwd == null) {
                 handler.post(listener::onToast);
-            }else if (account.equals(originAcc) && pwd.equals(originPwd)) {
+            } else if (account.equals(originAcc) && pwd.equals(originPwd)) {
                 handler.post(listener::onSuccess);
             } else {
                 handler.post(listener::onFailure);
+//                try {
+//                    Thread.sleep(2000);
+//                } catch (InterruptedException e) {
+//                    e.printStackTrace();
+//                }
+//                handler.post(listener::onResetButton);
             }
         }).start();
     }

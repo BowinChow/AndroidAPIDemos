@@ -5,4 +5,6 @@ public interface ILoginListener {
 
     void onFailure();
     void onToast();
+
+    void onResetButton();
 }

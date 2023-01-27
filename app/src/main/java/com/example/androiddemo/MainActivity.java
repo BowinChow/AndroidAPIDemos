@@ -1,11 +1,13 @@
 package com.example.androiddemo;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.AppCompatButton;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.method.HideReturnsTransformationMethod;
 import android.text.method.PasswordTransformationMethod;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
@@ -27,9 +29,9 @@ public class MainActivity extends AppCompatActivity implements ILoginView {
     private EditText mvpAccount;
     private CheckBox CB;
     SubmitButton mvpButton;
-    SubmitButton mvpRetrofitBtn;
-    SubmitButton listButton;
-    SubmitButton registerButton;
+    AppCompatButton mvpRetrofitBtn;
+    AppCompatButton listButton;
+    AppCompatButton registerButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -62,6 +64,7 @@ public class MainActivity extends AppCompatActivity implements ILoginView {
         mvpButton.setOnClickListener(v -> {
             mvpButton.showProgress();
             presenter.doLogin(mvpAccount.getText().toString(), mvpPsw.getText().toString());
+            Log.e(ContextUtils.TAG, "mvp button clicked");
         });
 
         registerButton.setOnClickListener(v -> {
@@ -112,10 +115,13 @@ public class MainActivity extends AppCompatActivity implements ILoginView {
     }
 
     @Override
-    protected void onResume() {
+    public void buttonReset() {
+        mvpButton.reset();
+    }
 
+    @Override
+    protected void onResume() {
         super.onResume();
-        listButton.reset();
     }
 
     @Override

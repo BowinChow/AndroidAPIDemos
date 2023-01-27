@@ -10,5 +10,6 @@ public interface ILoginView {
     void startAnotherActivity();
     void buttonSubmitSuccess();
     void buttonSubmitFailed();
+    void buttonReset();
 
 }

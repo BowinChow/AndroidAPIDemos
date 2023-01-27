@@ -43,6 +43,8 @@ public final class SubmitButton extends AppCompatButton {
     /** 结果状态 */
     private static final int STATE_RESULT = 3;
 
+    public int current_status = 0;
+
     /** 当前按钮状态 */
     private int mButtonState = STATE_NONE;
 
@@ -390,6 +392,7 @@ public final class SubmitButton extends AppCompatButton {
      */
     public void showError() {
         showResult(false);
+        current_status = 1;
     }
 
     /**

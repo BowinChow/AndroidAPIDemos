@@ -64,7 +64,7 @@
             android:layout_weight="1"
             android:text="Login" />
 
-        <com.example.widget.view.SubmitButton
+        <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/mvp_register"
             style="@style/ButtonStyle"
             android:layout_width="1dp"
@@ -75,14 +75,14 @@
     </LinearLayout>
 
 
-    <com.example.widget.view.SubmitButton
+    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/mvp_retrofit"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         style="@style/ButtonStyle"
         android:text="retrofit" />
 
-    <com.example.widget.view.SubmitButton
+    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/list_btn"
         style="@style/ButtonStyle"
         android:layout_width="match_parent"
