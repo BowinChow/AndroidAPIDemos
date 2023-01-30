@@ -112,6 +112,17 @@
 
             android:text="database" />
 
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/mvp_basic"
+            style="@style/ButtonStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/mvp_database"
+            android:layout_marginTop="20dp"
+
+
+            android:text="basic usage" />
+
     </RelativeLayout>
 
 

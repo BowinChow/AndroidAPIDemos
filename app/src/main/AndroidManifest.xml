@@ -16,8 +16,13 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AndroidDemo"
         tools:targetApi="31">
+        <service
+            android:name=".service.DemoService"
+            android:enabled="true"
+            android:exported="true"></service>
+
         <activity
-            android:name=".BasicUsageActivity"
+            android:name=".Activity.BasicUsageActivity"
             android:exported="false" />
         <activity
             android:name=".ListActivity"

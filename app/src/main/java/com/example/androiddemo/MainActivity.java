@@ -16,6 +16,7 @@ import android.widget.EditText;
 import android.widget.ProgressBar;
 import android.widget.Toast;
 
+import com.example.androiddemo.Activity.BasicUsageActivity;
 import com.example.androiddemo.Presenter.IPresenter;
 import com.example.androiddemo.Presenter.presenterImpl;
 import com.example.androiddemo.SQL.DatabaseHelper;
@@ -34,6 +35,7 @@ public class MainActivity extends AppCompatActivity implements ILoginView {
     AppCompatButton listButton;
     AppCompatButton registerButton;
     AppCompatButton databaseButton;
+    AppCompatButton basicUsageButton;
 
     private DatabaseHelper databaseHelper;
 
@@ -48,6 +50,13 @@ public class MainActivity extends AppCompatActivity implements ILoginView {
         listButton = findViewById(R.id.list_btn);
         registerButton = findViewById(R.id.mvp_register);
         databaseButton = findViewById(R.id.mvp_database);
+        basicUsageButton = findViewById(R.id.mvp_basic);
+        initView();
+
+    }
+
+
+    public void initView() {
 
         ContextUtils.registerActivity(MainActivity.this);
 
@@ -105,6 +114,10 @@ public class MainActivity extends AppCompatActivity implements ILoginView {
             }).start();
         });
 
+        basicUsageButton.setOnClickListener(v -> {
+            Intent intent = new Intent(MainActivity.this, BasicUsageActivity.class);
+            startActivity(intent);
+        });
     }
 
     @Override
