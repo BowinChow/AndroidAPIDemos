@@ -30,5 +30,13 @@
         android:layout_below="@+id/basic_handler"
         android:layout_marginTop="20dp"
         android:text="service demo" />
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/basic_aidl"
+        style="@style/ButtonStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/basic_service"
+        android:layout_marginTop="20dp"
+        android:text="aidl demo" />
 
 </RelativeLayout>

@@ -22,6 +22,7 @@ public class BasicUsageActivity extends AppCompatActivity {
     AppCompatButton handlerButton;
     AppCompatButton notiButton;
     AppCompatButton serviceButton;
+    AppCompatButton AIDLButton;
     private final static int MSG_SHOW_TOAST = 1;
 
     private DemoService.MyBinder myBinder;
@@ -42,18 +43,15 @@ public class BasicUsageActivity extends AppCompatActivity {
         }
     };
 
-    private Handler mHandler = new Handler(new Handler.Callback() {
-        @Override
-        public boolean handleMessage(@NonNull Message message) {
-            switch (message.what) {
-                case MSG_SHOW_TOAST:
-                    Toast.makeText(BasicUsageActivity.this, "update UI from thread", Toast.LENGTH_LONG).show();
-                    break;
-                default:
-                    break;
-            }
-            return true;
+    private Handler mHandler = new Handler(message -> {
+        switch (message.what) {
+            case MSG_SHOW_TOAST:
+                Toast.makeText(BasicUsageActivity.this, "update UI from thread", Toast.LENGTH_LONG).show();
+                break;
+            default:
+                break;
         }
+        return true;
     });
 
 
@@ -70,6 +68,7 @@ public class BasicUsageActivity extends AppCompatActivity {
         handlerButton = findViewById(R.id.basic_handler);
         notiButton = findViewById(R.id.basic_notification);
         serviceButton = findViewById(R.id.basic_service);
+        AIDLButton  =findViewById(R.id.basic_aidl);
 
         handlerButton.setOnClickListener(view -> {
 

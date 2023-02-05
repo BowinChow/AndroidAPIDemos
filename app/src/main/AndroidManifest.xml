@@ -17,9 +17,13 @@
         android:theme="@style/Theme.AndroidDemo"
         tools:targetApi="31">
         <service
-            android:name=".service.DemoService"
+            android:name=".Activity.AIDLService"
             android:enabled="true"
             android:exported="true"></service>
+        <service
+            android:name=".service.DemoService"
+            android:enabled="true"
+            android:exported="true" />
 
         <activity
             android:name=".Activity.BasicUsageActivity"
